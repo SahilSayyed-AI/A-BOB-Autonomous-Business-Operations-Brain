@@ -1,0 +1,67 @@
+A-BOB | Autonomous Business Operations Brain
+
+PROJECT OVERVIEW
+
+A-BOB is an AI-powered internal business operations system that
+includes: - HR Dashboard - Buddy Dashboard - Task Board - AI Chat
+Assistant - Employee and Workflow monitoring
+
+IMPORTANT NOTES
+
+1.  The AI Chatbot in HR Dashboard and Buddy Dashboard ONLY works when
+    an API key is present in: backend/.env
+
+2.  All features of the project are accessed from:
+    http://localhost:5173/
+
+3.  If another project is running on port 5173, stop it first so this
+    project can run.
+
+This project requires TWO TERMINALS: - One terminal for BACKEND - One
+terminal for FRONTEND
+
+============================== TERMINAL 1 — RUN BACKEND
+==============================
+
+Step 1: Open terminal and go to backend folder: cd C:\abob_clean_ready\backend
+
+Step 2: Create virtual environment: python -m venv venv
+
+Step 3: Activate environment: venv
+
+Step 4: Install required packages: pip install fastapi uvicorn[standard]
+pydantic python-multipart –only-binary=:all: –upgrade
+
+Step 5: Run backend server: uvicorn main:app –reload –port 8000
+
+If backend runs successfully, you will see:
+
+======================================================= A-BOB |
+Autonomous Business Operations Brain
+======================================================= [A-BOB] Demo
+data seeded: 3 employees, 5 tasks [A-BOB] API ready at
+http://localhost:8000 [A-BOB] Docs at http://localhost:8000/docs
+=======================================================
+
+============================== TERMINAL 2 — RUN FRONTEND
+==============================
+
+Step 1: Open NEW terminal and go to frontend folder: cd C:\abob_clean_ready\frontend
+
+Step 2: Install node modules: npm install
+
+Step 3: Run frontend: npm run dev
+
+After this, you will see a link like: http://localhost:5173/
+
+Open this link in Chrome.
+
+You will directly see the Login Page and can explore the project UI.
+
+API KEY REQUIREMENT
+
+To enable AI features, create this file:
+
+backend/.env
+
+Add your API key like: ANTHROPIC_API_KEY=your_real_key_here
